@@ -5,6 +5,11 @@ function App() {
   return (
     <>
       <Navbar/>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path='/' element={<ShowDynamicCards />} />
+        <Route path='/buttons' element={<ColoredButton/>} />
+      </Routes>
     </>
   )
 }

@@ -7,10 +7,11 @@ function Navbar() {
     <h1 className="font-bold text-4xl">Logo</h1>
     <div className="flex gap-3 items-center text-xl font-bold">
       <NavLink to="/">Home</NavLink>
-      <NavLink to="/Sign">Sign in</NavLink>
+      <NavLink to="/Signin">Sign in</NavLink>
       <NavLink to="/Login">Login</NavLink>
     </div>
   </div>
+  
   )
 }
 
