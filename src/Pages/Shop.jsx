@@ -2,9 +2,10 @@ import React, { useEffect, useState } from 'react'
 import Card from '../Components/Card'
 import Choose from '../Components/Choose';
 
-export default function Shop({category}) {
+export default function Shop() {
 
   const [Data, getData] = useState([]);
+  const [check,setCheck]=useState([]);
     const GetCards = async () => {
       const response = await fetch('https://fakestoreapi.in/api/products')
       const data = await response.json()
@@ -18,7 +19,10 @@ export default function Shop({category}) {
   return (
     <div>
       <div className='flex'>
-       <Choose />
+       <Choose 
+       check={check}
+       setCheck={setCheck}
+       />
       </div>
       <div className='flex flex-wrap gap-5 justify-between mt-[20px]'>
         {
@@ -34,6 +38,7 @@ export default function Shop({category}) {
               )
           })
         }
+
       </div>
     </div>
   )
