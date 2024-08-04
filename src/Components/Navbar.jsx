@@ -7,9 +7,9 @@ import Shop from '../Pages/Shop'
 export default function Navbar() {
   return (
     <>
-      <div className='bg-[#17202a] text-white border-b text-2xl font-bold border-white h-[48px] flex justify-between items-center'>
+      <div className='bg-[#17202a] text-white border-b text-2xl font-bold border-white h-[4rem] flex justify-between items-center'>
         <div>
-          <h1 className='ml-2' >Lets Shop</h1>
+          <h1 className='ml-2 text-4xl' >Lets Shop</h1>
         </div>
         <div className='flex justify-center items-center space-x-5 text-2xl mx-7'>
           <NavLink to="/" className='hover:border border-white p-1' >Home</NavLink>

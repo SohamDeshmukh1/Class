@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Card from '../Components/Card'
+import Choose from '../Components/Choose';
 
 export default function Shop() {
 
@@ -16,9 +17,9 @@ export default function Shop() {
 
   return (
     <div>
-      {/* <div>
-        If i need Content i might add here
-      </div> */}
+      <div className='flex'>
+       <Choose />
+      </div>
       <div className='flex flex-wrap gap-5 justify-between mt-[20px]'>
         {
           Data?.map((item, index) => {
