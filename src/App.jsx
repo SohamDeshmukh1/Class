@@ -4,7 +4,7 @@ import './App.css';
 
 function App() {
   return (
-    <div className="darktheme flex flex-col h-screen">
+    <div className="darktheme flex flex-col h-full w-full">
       <Navbar />
       {/* <div className="flex-grow">
       </div> */}
