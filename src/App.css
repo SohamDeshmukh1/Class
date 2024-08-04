@@ -1,3 +1,7 @@
 .active{
     color: aqua;
 }
+.darktheme{
+    background-color: #121212;
+    color:white;
+}

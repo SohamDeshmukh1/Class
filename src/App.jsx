@@ -3,7 +3,11 @@ import './App.css'
 function App() {
   return (
     <>
-      <Navbar/>  
+    <div className='darktheme'>
+      <div>
+        <Navbar />
+      </div>
+    </div>
     </>
   )
 }
