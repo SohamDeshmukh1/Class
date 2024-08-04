@@ -1,9 +1,16 @@
 import React, {useState} from 'react'
 import Shop from '../Pages/Shop';
 
-function Choose({}) {
+export default function Choose({}) {
+  const [caty, Setcaty] = useState([]);
 
-    const [caty,Setcaty] = useState();
+  const handleCheckboxChange = (category) => {
+    Setcaty(prevCategories => 
+      prevCategories.includes(category)
+        ? prevCategories.filter(cat => cat !== category) // Remove category if already selected
+        : [...prevCategories, category] // Add category if not selected
+    );
+  };
     return (
       <>
         <div>
@@ -12,27 +19,19 @@ function Choose({}) {
         </h1>
         <div className='w-full ml-1 h-[30px] flex justify-start p-5 pt-6 gap-10 items-center text-center'>
           <label className='text-white text-center flex justify-center items-center '>
-            <input onClick={()=>{
-              Setcaty('audio')
-            }} type="checkbox" id='audio' className="checkbox checkbox-sm checkbox-primary mr-2"/>
+            <input onClick={handleCheckboxChange('audio')} type="checkbox" id='audio' className="checkbox checkbox-sm checkbox-primary mr-2"/>
             Audio
           </label>
           <label className='text-white text-center flex justify-center items-center '>
-            <input onClick={()=>{
-              Setcaty('gaming')
-            }} type="checkbox" id='gaming' className="checkbox checkbox-sm checkbox-primary mr-2"/>
+            <input onClick={handleCheckboxChange('gaming')} type="checkbox" id='gaming' className="checkbox checkbox-sm checkbox-primary mr-2"/>
             Gaming
           </label>
           <label className='text-white text-center flex justify-center items-center'>
-          <input type="checkbox" id='mobile' onClick={()=>{
-            Setcaty('mobile')
-          }}  className="checkbox checkbox-sm checkbox-primary mr-2" />
+          <input type="checkbox" id='mobile' onClick={handleCheckboxChange('mobile')}  className="checkbox checkbox-sm checkbox-primary mr-2" />
             Mobile
           </label>
           <label className='text-white text-center flex justify-center items-center'>
-            <input onClick={()=>{
-              Setcaty('tv')
-            }} type="checkbox" id='tv' className="checkbox checkbox-sm checkbox-primary mr-2"/>
+            <input onClick={handleCheckboxChange('tv')} type="checkbox" id='tv' className="checkbox checkbox-sm checkbox-primary mr-2"/>
             Television
           </label>
         </div>
@@ -43,5 +42,3 @@ function Choose({}) {
       </>
     );
   }
-  
-  export default Choose;
