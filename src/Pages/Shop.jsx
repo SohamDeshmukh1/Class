@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Card from '../Components/Card'
 import Choose from '../Components/Choose';
 
-export default function Shop() {
+export default function Shop({category}) {
 
   const [Data, getData] = useState([]);
     const GetCards = async () => {

@@ -1,9 +1,9 @@
-import React, {  } from 'react'
+import React, {useState} from 'react'
+import Shop from '../Pages/Shop';
 
 function Choose({}) {
-  const handleCheckboxClick = ()=>{
 
-  }
+    const [caty,Setcaty] = useState();
     return (
       <>
         <div>
@@ -12,23 +12,34 @@ function Choose({}) {
         </h1>
         <div className='w-full ml-1 h-[30px] flex justify-start p-5 pt-6 gap-10 items-center text-center'>
           <label className='text-white text-center flex justify-center items-center '>
-            <input onClick={handleCheckboxClick} type="checkbox" id='audio' className="checkbox checkbox-sm checkbox-primary mr-2"/>
+            <input onClick={()=>{
+              Setcaty('audio')
+            }} type="checkbox" id='audio' className="checkbox checkbox-sm checkbox-primary mr-2"/>
             Audio
           </label>
           <label className='text-white text-center flex justify-center items-center '>
-            <input onClick={handleCheckboxClick} type="checkbox" id='gaming' className="checkbox checkbox-sm checkbox-primary mr-2"/>
+            <input onClick={()=>{
+              Setcaty('gaming')
+            }} type="checkbox" id='gaming' className="checkbox checkbox-sm checkbox-primary mr-2"/>
             Gaming
           </label>
           <label className='text-white text-center flex justify-center items-center'>
-          <input type="checkbox" id='mobile' onClick={handleCheckboxClick}  className="checkbox checkbox-sm checkbox-primary mr-2" />
+          <input type="checkbox" id='mobile' onClick={()=>{
+            Setcaty('mobile')
+          }}  className="checkbox checkbox-sm checkbox-primary mr-2" />
             Mobile
           </label>
           <label className='text-white text-center flex justify-center items-center'>
-            <input onClick={handleCheckboxClick} type="checkbox" id='tv' className="checkbox checkbox-sm checkbox-primary mr-2"/>
+            <input onClick={()=>{
+              Setcaty('tv')
+            }} type="checkbox" id='tv' className="checkbox checkbox-sm checkbox-primary mr-2"/>
             Television
           </label>
         </div>
         </div>
+        <Shop 
+          category={caty}
+        />
       </>
     );
   }
