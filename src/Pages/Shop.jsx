@@ -23,6 +23,9 @@ export default function Shop() {
 //     }   For the sake of testing with use effect as it was mounting as soon as check was getting changed
 //   })
 // }, [check])
+
+
+
   useEffect(() => {
     GetCards()
     
