@@ -31,14 +31,14 @@ export default function Shop() {
     
   }, [])
   return (
-    <div>
+    <div className='min-h-screen flex flex-col'>
       <div className='flex'>
        <Choose 
        check={check}
        setCheck={setCheck}
        />
       </div>
-      <div className='flex flex-wrap gap-5 justify-between mt-[20px]'>
+      <div className='flex-grow flex flex-wrap gap-5 justify-between mt-[40px] pb-10 px-10'>
       {check.length === 0
           ? Data?.map((item, index) => (
               <Card
