@@ -20,7 +20,7 @@ export default function Shop() {
 //         return [...prev,item.category]
 //       })
 //       console.log(category);
-//     }
+//     }   For the sake of testing with use effect as it was mounting as soon as check was getting changed
 //   })
 // }, [check])
 
