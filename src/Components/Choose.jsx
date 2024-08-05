@@ -19,10 +19,8 @@ function Choose({check, setCheck}) {
 
   return (
     <>
-      <h1 className='text-3xl pt-4 ml-14 pl-[20px] text-[#ffffff] '>
-        Choose your category :
-      </h1>
-      <div className='w-full h-[30px] flex justify-start p-5 pt-6 gap-10 items-center text-center'>
+      <div className='w-full h-[30px] flex justify-start p-2 pt-6 gap-5 items-center text-2xl text-center'>
+      <h1 className=' ml-14 pl-[10px] text-[#ffffff] '>Category :</h1>
         <label className='text-white text-center flex justify-center items-center '>
           <input onClick={handleCheckboxClick} type="checkbox" id='audio' className="checkbox checkbox-sm checkbox-primary mr-2"/>
           Audio
@@ -32,7 +30,7 @@ function Choose({check, setCheck}) {
           Gaming
         </label>
         <label className='text-white text-center flex justify-center items-center'>
-        <input type="checkbox" id='mobile' defaultChecked onClick={handleCheckboxClick}  className="checkbox checkbox-sm checkbox-primary mr-2" />
+        <input type="checkbox" id='mobile' onClick={handleCheckboxClick}  className="checkbox checkbox-sm checkbox-primary mr-2" />
           Mobile
         </label>
         <label className='text-white text-center flex justify-center items-center'>

@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function () {
   return (
-    <div className='border-t border-white'>
+    <div className='border-t border-white p-4'>
          <div className="container mx-auto">
         <p className="mb-2">© 2024 Your Company. All rights reserved.</p>
         <p>
