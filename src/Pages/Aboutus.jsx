@@ -6,7 +6,6 @@ export default function Aboutus() {
 
   const filtername = (e)=>{
     setFilter(e.target.value.toLowerCase())
-    console.log(filter);
   }
 
   const [data, setData] = useState([]);
@@ -43,8 +42,7 @@ export default function Aboutus() {
               />
             )
           }):
-          data
-              ?.filter((item) => 
+          data?.filter((item) => 
                 item.name.firstname.toLowerCase().includes(filter) ||
                 item.name.lastname.toLowerCase().includes(filter))
               .map((item, index) => (

@@ -4,6 +4,7 @@ import Home from '../Pages/Home'
 import About from '../Pages/Aboutus'
 import Signup from '../Pages/Signup'
 import Shop from '../Pages/Shop'
+import UserInfo from '../Pages/Userinfo'
 export default function Navbar() {
   return (
     <>
@@ -25,7 +26,7 @@ export default function Navbar() {
         <Route path='/Shop' element={ <Shop/> } />
         <Route path='/About' element={ <About/> } >
          
-         <Route path="/user/:username" element={<UserInfo />} />
+         <Route path="/About/:username" element={<UserInfo />} />
          
          </Route>
         <Route path='/Users' element={ <Signup /> } />
