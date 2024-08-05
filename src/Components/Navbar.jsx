@@ -23,7 +23,11 @@ export default function Navbar() {
       <Routes>
         <Route path='/' element={ <Home/> } />
         <Route path='/Shop' element={ <Shop/> } />
-        <Route path='/About' element={ <About/> } />
+        <Route path='/About' element={ <About/> } >
+         
+         <Route path="/user/:username" element={<UserInfo />} />
+         
+         </Route>
         <Route path='/Users' element={ <Signup /> } />
       </Routes>
     </>
