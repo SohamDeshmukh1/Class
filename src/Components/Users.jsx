@@ -1,6 +1,8 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
+function Users({imageSrc,name})
 
-function Users({imageSrc,name}) {
+{
   return (
     <div className='flex flex-wrap '>
       <div className='flex border border-white h-max p-2 bg-slate-500 rounded-2xl'>

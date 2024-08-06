@@ -3,7 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 
 function UserInfo() {
     const navigate = useNavigate()
-  const { username } = useParams();
+  const {username} = useParams();
 
     return (
       <div className="flex">

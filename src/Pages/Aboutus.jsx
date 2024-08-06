@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import Users from '../Components/Users';
+import { useNavigate } from 'react-router-dom';
 
 export default function Aboutus() {
   const [filter,setFilter]=useState("");
-
+  const navigate = useNavigate();
   const filtername = (e)=>{
     setFilter(e.target.value.toLowerCase())
   }
@@ -35,22 +36,26 @@ export default function Aboutus() {
         {
           filter == ""?data?.map((item, index) => {
             return (
-              <Users
+              <div onClick={()=>navigate(`users/${item.username}`)} >
+                <Users
                 key={index}
                 imageSrc={Image}
                 name={`${item.name.firstname} ${item.name.lastname}`}
               />
+              </div>
             )
           }):
           data?.filter((item) => 
                 item.name.firstname.toLowerCase().includes(filter) ||
                 item.name.lastname.toLowerCase().includes(filter))
               .map((item, index) => (
+                <div onClick={()=>navigate(`users/${item.username}`)} >
                 <Users
-                  key={index}
-                  imageSrc={Image}
-                  name={`${item.name.firstname} ${item.name.lastname}`}
-                />
+                key={index}
+                imageSrc={Image}
+                name={`${item.name.firstname} ${item.name.lastname}`}
+              />
+              </div>
               ))}
       </div>
     </div>
