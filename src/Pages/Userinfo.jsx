@@ -22,5 +22,4 @@ function UserInfo() {
       </div>
     );
 }
-
 export default UserInfo

@@ -36,7 +36,7 @@ export default function Aboutus() {
         {
           filter == ""?data?.map((item, index) => {
             return (
-              <div onClick={()=>navigate(`users/${item.username}`)} >
+              <div onClick={()=>navigate(`About/${item.username}`)} >
                 <Users
                 key={index}
                 imageSrc={Image}
@@ -49,7 +49,7 @@ export default function Aboutus() {
                 item.name.firstname.toLowerCase().includes(filter) ||
                 item.name.lastname.toLowerCase().includes(filter))
               .map((item, index) => (
-                <div onClick={()=>navigate(`users/${item.username}`)} >
+                <div onClick={()=>navigate(`About/${item.username}`)} >
                 <Users
                 key={index}
                 imageSrc={Image}

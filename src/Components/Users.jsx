@@ -1,7 +1,5 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
 function Users({imageSrc,name})
-
 {
   return (
     <div className='flex flex-wrap '>
